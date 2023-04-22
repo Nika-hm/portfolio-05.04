@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Моє портфоліо</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		
+		body {
+			font-family: Bradley Hand, cursive;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #9370DB;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		nav {
+			background-color: #ddd;
+			padding: 10px;
+		}
+		nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+		}
+		nav li {
+			margin: 0 10px;
+		}
+		nav a {
+			color: #333;
+			text-decoration: none;
+			padding: 5px 10px;
+			border-radius: 5px;
+		}
+		nav a:hover {
+			background-color: #9370DB;
+			color: #fff;
+		}
+		section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			background-color: #eee;
+			padding: 0 150px;
+		}
+		.portfolio-item {
+			margin: 10px;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+			border-radius: 5px;
+			min-width: 250px;
+			flex-grow: 1;
+		}
+		.portfolio-item img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		footer {
+			background-color: #9370DB;
+			color: #fff;
+			padding: 20px;
+		}
+
+		.social-icons {
+		  display: flex;
+		  justify-content: center;
+		  list-style: none;
+		  margin-top: 1rem;
+		  margin-bottom: 1rem;
+		  padding-left: 0;
+		}
+		.social-icons li {
+		  margin-left: 0.25rem;
+		  margin-right: 0.25rem;
+		}
+		.social-icons a {
+		  position: relative;
+		  display: block;
+		  -webkit-user-select: none;
+		  -moz-user-select: none;
+		  -ms-user-select: none;
+		  user-select: none;
+		  transition: background-color .3s ease-in-out;
+		  width: 2.5rem;
+		  height: 2.5rem;
+		  border-radius: .25rem;
+		}
+		.social-icons a::before {
+		  content: "";
+		  position: absolute;
+		  width: 1.2rem;
+		  height: 1.2rem;
+		  left: .65rem;
+		  top: .65rem;
+		  background: transparent no-repeat center center;
+		  background-size: 100% 100%;
+		}
+		.social-icons .social-icon-twitter::before {
+		    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%23ffffff' d='M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z'/%3E%3C/svg%3E");&#125;
+		}
+		.social-icons .social-icon-fb::before {
+   		 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%23ffffff' d='M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z'/%3E%3C/svg%3E");&#125;
+		}
+		.social-icons .social-icon-telegram::before {
+		  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z'/%3E%3C/svg%3E");&#125;
+		}
+		.social-icons .social-icon-youtube::before {
+		      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3Cpath fill='%2326e07f' d='M19.077 4.928A9.927 9.927 0 0012.011 2c-5.506 0-9.987 4.479-9.989 9.985a9.962 9.962 0 001.333 4.992L2 22l5.233-1.237a9.98 9.98 0 004.773 1.216h.004c5.505 0 9.986-4.48 9.989-9.985a9.922 9.922 0 00-2.922-7.066zm-2.179 10.626c-.208.583-1.227 1.145-1.685 1.186-.458.042-.887.207-2.995-.624-2.537-1-4.139-3.601-4.263-3.767-.125-.167-1.019-1.353-1.019-2.581s.645-1.832.874-2.081a.916.916 0 01.666-.312c.166 0 .333 0 .478.006.178.007.375.016.562.431.222.494.707 1.728.769 1.853s.104.271.021.437-.125.27-.249.416c-.125.146-.262.325-.374.437-.125.124-.255.26-.11.509.146.25.646 1.067 1.388 1.728.954.85 1.757 1.113 2.007 1.239.25.125.395.104.541-.063.146-.166.624-.728.79-.978s.333-.208.562-.125 1.456.687 1.705.812c.25.125.416.187.478.291.062.103.062.603-.146 1.186z'/%3e%3c/svg%3e");
+		    }
+		
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Моє портфоліо</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#">Про мене</a></li>
+			<li><a href="#">Резюме</a></li>
+			<li><a href="#">Портфоліо</a></li>
+			<li><a href="#">Контакти</a></li>
+		</ul>
+	</nav>
+	<section>
+		<div class="portfolio-item">
+			<h3 style="text-shadow: 1px 1px 2px gray;">Проект 1</h3>
+			<a href="https://nika-hm.github.io/7-miracles-08.03/">"7 Чудес України"</a>
+			<p>Проект про 7 чудес України: Києво-Печерська Лавра; Місто Кам’янець; Софіївка; Софія Київська; Херсонес Таврійський; Хортиця; Хотинська фортеця; </p>
+			<img src="12.png" alt="Перша картинка" width="300" height="200">
+		    <img src="13.png" alt="Друга картинка" width="300" height="200">
+		    <img src="14.png" alt="Третя картинка" width="300" height="200">
+		</div>
+		<div class="portfolio-item">
+			<h3 style="text-shadow: 1px 1px 2px gray;">Проект 2</h3>
+			<a href="https://nika-hm.github.io/Landscaping/">"Ландшафтний дизайн"</a>
+			<p>Проект про ландшафтний дизайн, історія, особливості; </p>
+			<img src="15.png" alt="Перша картинка" width="300" height="200">
+		    <img src="16.png" alt="Друга картинка" width="300" height="200">
+		    <img src="17.png" alt="Третя картинка" width="300" height="200">
+		</div>
+		<div class="portfolio-item">
+			<h3 style="text-shadow: 1px 1px 2px gray;">Проект 3</h3>
+			<a href="https://nika-hm.github.io/final-work-28.02-01.03/">"Спорт у моєму житті"</a>
+			<p>Проект про спорт, що присутній у багатьох людей в житті: біг, волейбол; </p>
+			<img src="18.png" alt="Перша картинка" width="300" height="200">
+		    <img src="19.png" alt="Друга картинка" width="300" height="200">
+		    <img src="20.png" alt="Третя картинка" width="300" height="200">
+		</div>
+	</section>
+		<footer>
+		<ul class="social-icons">
+			<li><a class="social-icon-twitter" href="#" title="..." target="_blank" rel="noopener"></a></li>
+		 	<li><a class="social-icon-fb" href="#" title="..." target="_blank" rel="noopener"></a></li>
+			<li><a class="social-icon-telegram" href="#" title="..." target="_blank" rel="noopener"></a></li>
+		</ul>
+    </footer>
+  </body>
+</html>
